@@ -30,7 +30,7 @@ components:
   data_bindings:
   - {property: text, code: 'self.item[''intISBN'']'}
 - type: Label
-  properties: {}
+  properties: {bold: true}
   name: lblCategories
   layout_properties: {column: AZOQRA}
   data_bindings:

@@ -9,10 +9,6 @@ import string
 
 
 @anvil.server.callable
-def get_book_list():
-    return app_tables.tblbooks.search()
-
-@anvil.server.callable
 def search_books(strQuery):
     books = get_book_list()  # Retrieve the list of all books
   

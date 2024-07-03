@@ -25,9 +25,10 @@ components:
         role: null
         spacing_above: small
         columns:
-        - {id: JKSDUP, title: Title, data_key: column_1, width: 314, expand: false, $$hashKey: 'object:36612'}
-        - {id: XOOPAG, data_key: column_1, title: Author, $$hashKey: 'object:36613'}
-        - {id: VJQQOR, title: ISBN, data_key: column_2, $$hashKey: 'object:36614'}
+        - {id: JKSDUP, title: Title, data_key: column_1, width: 290, expand: false, $$hashKey: 'object:36612'}
+        - {id: VJQQOR, title: ISBN, data_key: column_2, $$hashKey: 'object:36614', width: 95, expand: false}
+        - {id: XOOPAG, data_key: column_1, title: Author, $$hashKey: 'object:36613', width: 119, expand: false}
+        - {id: AZOQRA, title: Categories, data_key: column_3, $$hashKey: 'object:4084'}
         - {id: DABYWC, data_key: column_4, title: Status, $$hashKey: 'object:36615'}
         background: ''
         rows_per_page: 10

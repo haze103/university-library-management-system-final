@@ -12,8 +12,7 @@ unique_ids:
     confirmReservation: '1719543058258600726932616.9646'
     homePage: '1719489160747351852761240.5953'
   modules: {}
-  server_modules:
-    ServerModule1: '171879762621974709737429.52113'
+  server_modules: {}
   assets:
     polytechnic_university_of_the_philippines_logo-logo.png: '1719480476473774704906018.4119'
     polytechnic_university_of_the_philippines_logo.png: '1718559104233729472084791.2373'

@@ -1,28 +1,28 @@
 is_package: true
 container:
   type: DataRowPanel
-  properties: {align: left, bold: true}
+  properties: {align: center, bold: true}
 components:
 - type: Label
-  properties: {}
+  properties: {align: center}
   name: borrowerLogID
   layout_properties: {column: JKSDUP}
   data_bindings:
   - {property: text, code: 'self.item[''intBorrowerLogID'']'}
 - type: Label
-  properties: {}
+  properties: {align: center}
   name: reservationID
   layout_properties: {column: VJQQOR}
   data_bindings:
   - {property: text, code: 'self.item[''intReservationLogID'']'}
 - type: Label
-  properties: {}
+  properties: {align: center}
   name: datReturn
   layout_properties: {column: OJLQEN}
   data_bindings:
   - {property: text, code: 'self.item[''datToReturn'']'}
 - type: Label
-  properties: {}
+  properties: {align: center}
   name: adminID
   layout_properties: {column: FWBWWG}
   data_bindings:

@@ -10,6 +10,16 @@ components:
     type: ColumnPanel
     layout_properties: {grid_position: 'KIGBLY,STEYTS'}
     components:
+    - name: secGridPanel1
+      properties: {spacing_above: none, spacing_below: none}
+      type: GridPanel
+      layout_properties: {grid_position: 'UOCMVM,DQEOMD'}
+      components:
+      - name: cmdHomeBtn
+        properties: {text: Admin Home, icon: 'fa:home', bold: true, foreground: '#000000', spacing_above: none, spacing_below: none, align: left}
+        type: Button
+        layout_properties: {row: GHGJIU, width_xs: 3, col_xs: 0}
+        event_bindings: {click: cmdHomeBtn_click}
     - name: shpSpace1
       properties: {height: 32}
       type: Spacer
@@ -76,8 +86,8 @@ components:
           role: tonal-data-grid
           spacing_above: small
           columns:
-          - {id: FHJXND, title: Borrower Log Status ID, data_key: column_1, $$hashKey: 'object:50151', width: 254, expand: false}
-          - {id: ISTQYJ, title: Return Date, data_key: column_2, $$hashKey: 'object:50152', width: 200, expand: false}
+          - {id: FHJXND, title: Borrower Log Status ID, data_key: column_1, $$hashKey: 'object:50151', width: 261, expand: false}
+          - {id: ISTQYJ, title: Returned Date, data_key: column_2, $$hashKey: 'object:50152', width: 343, expand: false}
           - {id: AOHMXD, title: Borrower Status Code, data_key: column_3, $$hashKey: 'object:50153'}
           background: ''
           rows_per_page: 10

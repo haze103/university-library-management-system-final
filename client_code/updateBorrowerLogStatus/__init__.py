@@ -44,4 +44,9 @@ class updateBorrowerLogStatus(updateBorrowerLogStatusTemplate):
   def cmdPayBtn_click(self, **event_args):
     self.secContentPanel.clear()
     self.secContentPanel.add_component(payFees())
+
+  def cmdHomeBtn_click(self, **event_args):
+    from ..adminHome import adminHome
+    self.secContentPanel.clear()
+    self.secContentPanel.add_component(adminHome())
       

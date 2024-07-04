@@ -25,3 +25,8 @@ class updateBorrowerLog(updateBorrowerLogTemplate):
       return True
     else:
       alert("Error Updating!")
+
+  def cmdHomeBtn_click(self, **event_args):
+    from ..adminHome import adminHome
+    self.secContentPanel.clear()
+    self.secContentPanel.add_component(adminHome())

@@ -4,6 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from ..cancelReservation import cancelReservation
 from ..borrowerSlipPage import borrowerSlipPage
 
 class homePage(homePageTemplate):
@@ -22,4 +23,4 @@ class homePage(homePageTemplate):
 
   def cmdCancelBtn_click(self, **event_args):
     self.secContentPanel.clear()
-    self.secContentPanel.add_component(borrowerSlipPage())
+    self.secContentPanel.add_component(cancelReservation())

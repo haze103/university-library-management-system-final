@@ -1,0 +1,59 @@
+container: {type: ColumnPanel}
+components:
+- name: secContentPanel
+  properties: {background: '#800000'}
+  type: ColumnPanel
+  layout_properties: {grid_position: ''}
+  components:
+  - name: secFrame
+    properties: {role: outlined-card, background: '#80000', border: none, spacing_above: large, spacing_below: large}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'LZJQHD,VGOUGB'}
+    components:
+    - name: secGridPanel1
+      properties: {spacing_above: none, spacing_below: none}
+      type: GridPanel
+      layout_properties: {grid_position: 'PBXWDQ,ZXGSEV'}
+      components:
+      - name: cmdHomeBtn
+        properties: {text: Home, icon: 'fa:home', bold: true, foreground: '#000000', spacing_above: none, spacing_below: none, align: right}
+        type: Button
+        layout_properties: {row: GHGJIU, width_xs: 3, col_xs: 0}
+        event_bindings: {click: cmdHomeBtn_click}
+    - name: grid_panel_2
+      properties: {}
+      type: GridPanel
+      layout_properties: {grid_position: 'ZBESNN,QSZBBL'}
+      components:
+      - name: label_1
+        properties: {spacing_above: small, spacing_below: none, text: Reservation Log ID, bold: true}
+        type: Label
+        layout_properties: {row: TBMCGM, width_xs: 4, col_xs: 1}
+      - name: label_1_copy_2
+        properties: {spacing_above: none, spacing_below: none, text: strISBN, bold: true}
+        type: Label
+        layout_properties: {row: TBMCGM, width_xs: 3, col_xs: 7}
+      - name: txtReservationLogID
+        properties: {role: outlined, spacing_above: none, placeholder: Reservation Log ID, hide_text: false, background: 'theme:Primary Container'}
+        type: TextBox
+        layout_properties: {row: ZGCHHJ, width_xs: 4, col_xs: 1}
+      - name: txtISBN
+        properties: {role: outlined, spacing_above: none, placeholder: ISBN, background: 'theme:Primary Container'}
+        type: TextBox
+        layout_properties: {row: ZGCHHJ, width_xs: 4, col_xs: 7}
+        event_bindings: {pressed_enter: txtISBN_pressed_enter}
+      - name: label_1_copy_5
+        properties: {spacing_above: none, spacing_below: none, text: Reservation Date, bold: true}
+        type: Label
+        layout_properties: {row: JVSVMV, width_xs: 3, col_xs: 1}
+      - name: txtDateCancelled
+        properties: {}
+        type: DatePicker
+        layout_properties: {row: ISOKFO, width_xs: 3, col_xs: 1}
+        event_bindings: {change: cmdReservationDate_change}
+      - name: cmdConfBtn
+        properties: {role: filled-button, bold: false, spacing_above: large, background: '#DAA520', foreground: '#800000', spacing_below: medium, border: '', font_size: 20, text: Confirm}
+        type: Button
+        layout_properties: {row: QFHCGT, width_xs: 4, col_xs: 4}
+        event_bindings: {click: cmdConfBtn_click}
+is_package: true

@@ -1,19 +1,21 @@
-container: {type: DataRowPanel}
+container:
+  type: DataRowPanel
+  properties: {align: center}
 components:
 - type: Label
-  properties: {bold: true}
+  properties: {bold: true, align: center}
   name: intBorrowerLogStatID
   layout_properties: {column: FHJXND}
   data_bindings:
   - {property: text, code: 'self.item[''intBorrowerLogStatusID'']', writeback: false}
 - type: Label
-  properties: {align: left, bold: true}
+  properties: {align: center, bold: true}
   name: dtmDateRet
   layout_properties: {column: ISTQYJ}
   data_bindings:
   - {property: text, code: 'self.item[''dtmReturned'']', writeback: false}
 - type: Label
-  properties: {bold: true}
+  properties: {bold: true, align: center}
   name: strBorrowerStatCode
   layout_properties: {column: AOHMXD}
   data_bindings:

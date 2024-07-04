@@ -27,3 +27,8 @@ class payFees(payFeesTemplate):
       return True
     else:
       alert("Payment Error!")
+
+  def cmdHomeBtn_click(self, **event_args):
+    from ..adminHome import adminHome
+    self.secContentPanel.clear()
+    self.secContentPanel.add_component(adminHome())

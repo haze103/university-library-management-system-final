@@ -10,6 +10,16 @@ components:
     type: ColumnPanel
     layout_properties: {grid_position: 'ZRVIJI,RYIXYN'}
     components:
+    - name: secGridPanel1
+      properties: {spacing_above: none, spacing_below: none}
+      type: GridPanel
+      layout_properties: {grid_position: 'ATBKBV,WNZCUN'}
+      components:
+      - name: cmdHomeBtn
+        properties: {text: Admin Home, icon: 'fa:home', bold: true, foreground: '#000000', spacing_above: none, spacing_below: none, align: left}
+        type: Button
+        layout_properties: {row: GHGJIU, width_xs: 3, col_xs: 0}
+        event_bindings: {click: cmdHomeBtn_click}
     - name: secGridPanel
       properties: {}
       type: GridPanel

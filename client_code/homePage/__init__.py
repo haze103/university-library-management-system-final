@@ -21,13 +21,13 @@ class homePage(homePageTemplate):
     self.secContentPanel.clear()
     self.secContentPanel.add_component(borrowerSlipPage())
 
-  def cmdAdminBtn_click(self, **event_args):
+  def cmdCancelBtn_click(self, **event_args):
     alert(content=adminIDConf(), title="Confirm your access level", large=True, buttons=[])
     strEmail = self.txtEmail.text.strip()
     strPassword = self.txtPassword.text.strip()
 
     if self.validate_credentials(strEmail, strPassword):
-        intISBN = # Replace this with the ISBN of the reserved book
+        #intISBN = # Replace this with the ISBN of the reserved book
         intBookID = anvil.server.call('get_book_id_from_isbn', intISBN)
 
         if intBookID is not None:

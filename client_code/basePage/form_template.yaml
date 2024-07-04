@@ -21,4 +21,8 @@ components:
   properties: {}
   type: FlowPanel
   layout_properties: {slot: nav-right}
-  components: []
+  components:
+  - name: cmdAdminBtn
+    properties: {bold: false, text: Admin, icon: 'fa:lock', background: 'theme:Primary Container', underline: false}
+    type: Link
+    layout_properties: {}

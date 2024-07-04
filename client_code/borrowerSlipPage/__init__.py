@@ -11,8 +11,8 @@ class borrowerSlipPage(borrowerSlipPageTemplate):
     def __init__(self, **properties):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
-        self.cmdReservationDate.date = date.today() 
-        self.cmdReservationDate.enabled = False
+        self.txtReservationDate.date = date.today() 
+        self.txtReservationDate.enabled = False
 
     def cmdHomeBtn_click(self, **event_args):
         from ..homePage import homePage
@@ -25,18 +25,14 @@ class borrowerSlipPage(borrowerSlipPageTemplate):
         intIsbn = self.txtISBN.text.strip()
         strTitle = self.txtBookTitle.text.strip()
         datBorrowed = self.txtDateBorrowed.date
+        datReserved = self.txtReservationDate.date
+        strEmail = self.txtEmail.text.strip()
+        strPassword = self.txtPassword.text.strip()
 
-        strResult = anvil.server.call('validate_reservation_details', strUserID, strFullName, intIsbn, strTitle, datBorrowed)
+        strResult = anvil.server.call('validate_reservation_details', strUserID, strFullName, intIsbn, strTitle, datBorrowed, datReserved, strEmail, strPassword)
 
         if strResult == "Valid":
-            alert(content="Confirm your reservation", title="Reservation Received")
-            self.cmdConfBtn.visible = False
-            alert(content=confirmReservation(), title="Confirm your reservation", large=True, buttons=[])
-            self.intIsbn = intIsbn  # Store intIsbn for later use
+            alert(content="Please claim the book on your reserved date. Thank you!", title="Reservation Confirmed")
         else:
             alert(strResult)
-
-    def validate_credentials(self, strEmail, strPassword):
-      strResult = anvil.server.call("validate_user_credentials", strEmail, strPassword)
-      return strResult
       

@@ -42,14 +42,14 @@ components:
         type: TextBox
         layout_properties: {row: ZGCHHJ, width_xs: 4, col_xs: 7}
       - name: label_1_copy_2
-        properties: {spacing_above: none, spacing_below: none, text: Name, bold: true}
+        properties: {spacing_above: none, spacing_below: none, text: First Name, bold: true}
         type: Label
         layout_properties: {row: WUQEBN, width_xs: 3, col_xs: 1}
       - name: label_1_copy_3
         properties: {spacing_above: none, spacing_below: none, text: Title, bold: true}
         type: Label
         layout_properties: {row: WUQEBN, width_xs: 3, col_xs: 7}
-      - name: txtName
+      - name: txtFName
         properties: {role: outlined, spacing_above: none, placeholder: Name, background: 'theme:Primary Container'}
         type: TextBox
         layout_properties: {row: AKVMAF, width_xs: 4, col_xs: 1}
@@ -57,23 +57,39 @@ components:
         properties: {role: outlined, spacing_above: none, placeholder: Title, background: 'theme:Primary Container'}
         type: TextBox
         layout_properties: {row: AKVMAF, width_xs: 4, col_xs: 7}
+      - name: label_1_copy_2_copy
+        properties: {spacing_above: none, spacing_below: none, text: Middle Name, bold: true}
+        type: Label
+        layout_properties: {row: JVSVMV, width_xs: 3, col_xs: 1}
       - name: label_1_copy_5
         properties: {spacing_above: none, spacing_below: none, text: Reservation Date, bold: true}
+        type: Label
+        layout_properties: {row: JVSVMV, width_xs: 3, col_xs: 7}
+      - name: txtMName
+        properties: {role: outlined, spacing_above: none, placeholder: Name, background: 'theme:Primary Container'}
+        type: TextBox
+        layout_properties: {row: ISOKFO, width_xs: 4, col_xs: 1}
+      - name: cmdReservationDate
+        properties: {}
+        type: DatePicker
+        layout_properties: {row: ISOKFO, width_xs: 3, col_xs: 7}
+        event_bindings: {change: cmdReservationDate_change}
+      - name: label_1_copy_2_copy_2
+        properties: {spacing_above: none, spacing_below: none, text: Last Name, bold: true}
         type: Label
         layout_properties: {row: QNMIKF, width_xs: 3, col_xs: 1}
       - name: label_1_copy_5_copy
         properties: {spacing_above: none, spacing_below: none, text: Borrowing Date, bold: true}
         type: Label
         layout_properties: {row: QNMIKF, width_xs: 3, col_xs: 7}
-      - name: cmdReservationDate
-        properties: {}
-        type: DatePicker
-        layout_properties: {row: FTKBGA, width_xs: 3, col_xs: 1}
-        event_bindings: {change: cmdReservationDate_change}
+      - name: txtLName
+        properties: {role: outlined, spacing_above: none, placeholder: Name, background: 'theme:Primary Container'}
+        type: TextBox
+        layout_properties: {row: HPVBWT, width_xs: 4, col_xs: 1}
       - name: txtDateBorrowed
         properties: {}
         type: DatePicker
-        layout_properties: {row: FTKBGA, width_xs: 3, col_xs: 7}
+        layout_properties: {row: HPVBWT, width_xs: 3, col_xs: 7}
         event_bindings: {change: txtDateBorrowed_change}
       - name: cmdConfBtn
         properties: {role: filled-button, bold: false, spacing_above: large, background: '#DAA520', foreground: '#800000', spacing_below: medium, border: '', font_size: 20, text: Confirm}

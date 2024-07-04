@@ -25,7 +25,3 @@ class confirmReservation(confirmReservationTemplate):
         return True
       else:
         alert("Invalid email or password. Please try again.")
-
-
-
-

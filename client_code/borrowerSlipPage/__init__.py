@@ -33,6 +33,15 @@ class borrowerSlipPage(borrowerSlipPageTemplate):
 
         if strResult == "Valid":
             alert(content="Please claim the book on your reserved date. Thank you!", title="Reservation Confirmed")
+            self.txtUniqueID.text = ""
+            self.txtFName.text = ""
+            self.txtMName.text = ""
+            self.txtLName.text = ""
+            self.txtISBN.text = ""
+            self.txtBookTitle.text = ""
+            self.txtReservationDate.date = None  # Set the date to None to clear it
+            self.txtEmail.text = ""
+            self.txtPassword.text = ""
         else:
             alert(strResult)
       

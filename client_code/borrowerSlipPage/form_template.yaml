@@ -108,9 +108,10 @@ components:
         type: TextBox
         layout_properties: {row: DUZHHL, width_xs: 4, col_xs: 1}
       - name: txtPassword
-        properties: {role: outlined, spacing_above: none, placeholder: Name, background: 'theme:Primary Container'}
+        properties: {role: outlined, spacing_above: none, placeholder: Name, background: 'theme:Primary Container', hide_text: true}
         type: TextBox
         layout_properties: {row: DUZHHL, width_xs: 4, col_xs: 7}
+        data_bindings: []
       - name: cmdConfBtn
         properties: {role: filled-button, bold: false, spacing_above: large, background: '#DAA520', foreground: '#800000', spacing_below: medium, border: '', font_size: 20, text: Confirm}
         type: Button

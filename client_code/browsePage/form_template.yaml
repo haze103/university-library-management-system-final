@@ -1,14 +1,14 @@
 container: {type: ColumnPanel}
 components:
 - name: secContentPanel
-  properties: {background: '#800000'}
+  properties: {background: '#800000', col_widths: '{}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'QWIMDI,VDMXSK'}
   components:
   - name: secFrame
     properties: {role: outlined-card, background: '#80000', border: none, spacing_above: large, spacing_below: large}
     type: ColumnPanel
-    layout_properties: {grid_position: 'QHQDGU,AXBUMB'}
+    layout_properties: {grid_position: 'QHQDGU,VCITAX'}
     components:
     - name: secGridPanel1
       properties: {spacing_above: none, spacing_below: none}
@@ -22,13 +22,13 @@ components:
         event_bindings: {click: cmdHomeBtn_click}
     - name: tblBookList
       properties:
-        role: null
+        role: tonal-data-grid
         spacing_above: small
         columns:
-        - {id: JKSDUP, title: Title, data_key: column_1, width: 290, expand: false, $$hashKey: 'object:36612'}
-        - {id: VJQQOR, title: ISBN, data_key: column_2, $$hashKey: 'object:36614', width: 117, expand: false}
-        - {id: XOOPAG, data_key: column_1, title: Author, $$hashKey: 'object:36613', width: 167, expand: false}
-        - {id: AZOQRA, title: Categories, data_key: column_3, $$hashKey: 'object:4084'}
+        - {id: JKSDUP, title: Title, data_key: column_1, width: 353, expand: false, $$hashKey: 'object:36612'}
+        - {id: VJQQOR, title: ISBN, data_key: column_2, $$hashKey: 'object:36614', width: 136, expand: false}
+        - {id: XOOPAG, data_key: column_1, title: Author, $$hashKey: 'object:36613', width: 155, expand: false}
+        - {id: AZOQRA, title: Categories, data_key: column_3, $$hashKey: 'object:4084', width: 151, expand: false}
         - {id: DABYWC, data_key: column_4, title: Status, $$hashKey: 'object:36615'}
         background: ''
         rows_per_page: 10

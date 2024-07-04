@@ -15,7 +15,7 @@ components:
   name: cmdStatusBtn
   layout_properties: {column: DABYWC}
   data_bindings:
-  - {property: text, code: 'self.item[''strBookStatus'']', writeback: false}
+  - {property: text, code: 'self.item[''strBookStatusName'']', writeback: false}
   event_bindings: {click: cmdStatusBtn_click}
 - name: lblAuthor
   properties: {bold: true, align: center}
@@ -28,9 +28,9 @@ components:
   name: lblISBN
   layout_properties: {column: VJQQOR}
   data_bindings:
-  - {property: text, code: 'self.item[''intISBN'']'}
+  - {property: text, code: 'self.item[''strISBN'']', writeback: false}
 - type: Label
-  properties: {bold: true}
+  properties: {bold: true, align: center}
   name: lblCategories
   layout_properties: {column: AZOQRA}
   data_bindings:

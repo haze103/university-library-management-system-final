@@ -14,6 +14,7 @@ class borrowerSlipPage(borrowerSlipPageTemplate):
       self.init_components(**properties)
       self.cmdReservationDate.date = date.today() 
       self.cmdReservationDate.enabled = False
+      self.secPopUp.visible = False
 
     def cmdHomeBtn_click(self, **event_args):
       from ..homePage import homePage
@@ -30,7 +31,8 @@ class borrowerSlipPage(borrowerSlipPageTemplate):
       strResult = anvil.server.call('validate_reservation_details', strUserID, strFullName, intIsbn, strTitle, datBorrowed)
 
       if strResult == "Valid":
-        alert(content=confirmReservation(), title="Confirm your reservation", large=True, buttons=[])
+        alert(content="Confirm your reservation", title="Reservation Received")
+        self.secPopUp.visible = True
       else:
         alert(strResult)
 

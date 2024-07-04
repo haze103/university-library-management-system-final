@@ -41,8 +41,8 @@ class borrowerSlipPage(borrowerSlipPageTemplate):
       return strResult
       
     def cmdConfirmBtn_click(self, **event_args):
-      strEmail = self.txtEmail.text.strip()
-      strPassword = self.txtPassword.text.strip()
+      strEmail = self.secPopUp.txtEmail.text.strip()
+      strPassword = self.secPopUp.txtPassword.text.strip()
 
       if self.validate_credentials(strEmail, strPassword):
         alert(title = "Access Granted. ", content = "You now have access to admin page", buttons=[])

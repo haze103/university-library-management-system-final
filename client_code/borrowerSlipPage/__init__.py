@@ -5,6 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from datetime import date
+from ..confirmReservation import confirmReservation
 
 class borrowerSlipPage(borrowerSlipPageTemplate):
     def __init__(self, **properties):
@@ -12,7 +13,6 @@ class borrowerSlipPage(borrowerSlipPageTemplate):
         self.init_components(**properties)
         self.cmdReservationDate.date = date.today() 
         self.cmdReservationDate.enabled = False
-        self.secPopUp.visible = True
 
     def cmdHomeBtn_click(self, **event_args):
         from ..homePage import homePage
@@ -31,7 +31,7 @@ class borrowerSlipPage(borrowerSlipPageTemplate):
         if strResult == "Valid":
             alert(content="Confirm your reservation", title="Reservation Received")
             self.cmdConfBtn.visible = False
-            self.secPopUp.visible = True
+            alert(content=confirmReservation(), title="Confirm your reservation", large=True, buttons=[])
             self.intIsbn = intIsbn  # Store intIsbn for later use
         else:
             alert(strResult)
@@ -40,9 +40,3 @@ class borrowerSlipPage(borrowerSlipPageTemplate):
       strResult = anvil.server.call("validate_user_credentials", strEmail, strPassword)
       return strResult
       
-    def cmdConfirmBtn_click(self, **event_args):
-      strEmail = self.secPopUp.txtEmail.text.strip()
-      strPassword = self.secPopUp.txtPassword.text.strip()
-
-      if self.validate_credentials(strEmail, strPassword):
-        alert(title = "Access Granted. ", content = "You now have access to admin page", buttons=[])

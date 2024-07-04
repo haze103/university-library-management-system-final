@@ -1,0 +1,62 @@
+container: {type: ColumnPanel}
+components:
+- name: secContentPanel
+  properties: {background: '#800000'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'XYUOMP,LMICMR'}
+  components:
+  - name: secPopUp
+    properties: {role: outlined-card, background: 'theme:Secondary Container'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'ZRVIJI,RYIXYN'}
+    components:
+    - name: secGridPanel
+      properties: {}
+      type: GridPanel
+      layout_properties: {grid_position: 'QNDSNU,DTNRZX'}
+      components:
+      - name: lblh2_copy
+        properties: {text: Borrower Log Status ID, bold: true, align: center, font_size: 18, underline: false, italic: false, foreground: ''}
+        type: Label
+        layout_properties: {row: QSEGXG, width_xs: 3, col_xs: 0}
+      - name: lblh2
+        properties: {text: Borrower Status, bold: true, align: center, font_size: 18, underline: false, italic: false, foreground: ''}
+        type: Label
+        layout_properties: {row: QSEGXG, width_xs: 4, col_xs: 4}
+      - name: lblh2_1
+        properties: {text: Date Returned, bold: true, align: center, font_size: 18, underline: false, italic: false, foreground: ''}
+        type: Label
+        layout_properties: {row: QSEGXG, width_xs: 3, col_xs: 9}
+      - name: txtBorrowerLogStatusID
+        properties: {role: outlined, placeholder: Borrower Log Status ID, background: '#FFFFFF', type: text}
+        type: TextBox
+        layout_properties: {row: DWKQRT, width_xs: 3, col_xs: 0}
+      - name: txtBorrowerStat
+        properties: {background: '#FFFFFF', placeholder: '', include_placeholder: false}
+        type: DropDown
+        layout_properties: {row: DWKQRT, width_xs: 4, col_xs: 4}
+        data_bindings:
+        - {property: items, code: 'self.item[''strStatusName'']', writeback: false}
+      - name: txtRetDate
+        properties: {background: '#FFFFFF'}
+        type: DatePicker
+        layout_properties: {row: DWKQRT, width_xs: 3, col_xs: 9}
+      - name: lblDatReportLost
+        properties: {text: Date Reported Lost, bold: true, align: center, font_size: 18, underline: false, italic: false, foreground: ''}
+        type: Label
+        layout_properties: {row: EREFOW, width_xs: 4, col_xs: 0}
+      - name: txtDatLost
+        properties: {background: '#FFFFFF'}
+        type: DatePicker
+        layout_properties: {row: EREFOW, width_xs: 4, col_xs: 4}
+      - name: cmdPayBtn
+        properties: {role: filled-button, bold: false, spacing_above: large, background: '#DAA520', foreground: '#800000', spacing_below: medium, border: '', font_size: 18, text: Pay}
+        type: Button
+        layout_properties: {row: GLVIRB, width_xs: 3, col_xs: 0}
+        event_bindings: {click: cmdPayBtn_click}
+      - name: cmdConfirmBtn
+        properties: {role: filled-button, bold: false, spacing_above: large, background: '#DAA520', foreground: '#800000', spacing_below: medium, border: '', font_size: 18, text: Confirm}
+        type: Button
+        layout_properties: {row: GLVIRB, width_xs: 4, col_xs: 8}
+        event_bindings: {click: cmdConfirmBtn_click}
+is_package: true

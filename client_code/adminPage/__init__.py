@@ -11,5 +11,5 @@ class adminPage(adminPageTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    self.dataPanel1.items = anvil.server.call('get_reserved_books')
-    self.dataPanel2.items = anvil.server.call('get_currently_borrowed_books')
+    self.dataPanel1.items = anvil.server.call('get_borrower_log_status_list')
+    self.dataPanel2.items = anvil.server.call('get_borrower_log_list')

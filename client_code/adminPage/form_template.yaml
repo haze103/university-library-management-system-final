@@ -76,9 +76,9 @@ components:
           role: tonal-data-grid
           spacing_above: small
           columns:
-          - {id: FHJXND, title: Title, data_key: column_1, $$hashKey: 'object:50151', width: 325, expand: false}
-          - {id: ISTQYJ, title: Return Date, data_key: column_2, $$hashKey: 'object:50152', width: 182, expand: false}
-          - {id: AOHMXD, title: Borrower Log ID, data_key: column_3, $$hashKey: 'object:50153'}
+          - {id: FHJXND, title: Borrower Log Status ID, data_key: column_1, $$hashKey: 'object:50151', width: 254, expand: false}
+          - {id: ISTQYJ, title: Return Date, data_key: column_2, $$hashKey: 'object:50152', width: 200, expand: false}
+          - {id: AOHMXD, title: Borrower Status Code, data_key: column_3, $$hashKey: 'object:50153'}
           background: ''
           rows_per_page: 10
           wrap_on: never
@@ -89,7 +89,7 @@ components:
           visible: true
           border: ''
           tooltip: ''
-        name: tblBorrowed
+        name: borrowerStatCode
         layout_properties: {grid_position: 'BCCJPI,QYFIAJ'}
         components:
         - type: RepeatingPanel

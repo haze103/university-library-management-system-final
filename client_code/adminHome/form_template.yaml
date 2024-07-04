@@ -27,20 +27,20 @@ components:
       name: grid_panel_1
       layout_properties: {grid_position: 'XOYOMX,VUOLQD'}
       components:
-      - name: cmdBooksBtn
-        properties: {role: outlined-button, bold: false, align: center, spacing_above: large, background: '#800000', icon: 'fa:calendar-check-o', underline: false, font: '', icon_align: left, foreground: '#FFFF', spacing_below: large, visible: true, border: '', italic: false, enabled: true, font_size: 20, tooltip: '', text: Update Borrower Log}
+      - name: cmdUpdateRetDate
+        properties: {role: outlined-button, bold: true, align: center, spacing_above: large, background: '#800000', icon: 'fa:calendar-check-o', underline: false, font: '', icon_align: left, foreground: '#FFFF', spacing_below: large, visible: true, border: '', italic: false, enabled: true, font_size: 20, tooltip: '', text: Update Return Date}
         type: Button
         layout_properties: {grid_position: 'VWHXBD,VHREVK', full_width_row: false, row: UMMWQA, width_xs: 10, col_xs: 1}
-        event_bindings: {click: cmdUBorrowerLogBtn_click}
-      - name: cmdReserveBtn
-        properties: {role: outlined-button, bold: true, align: center, spacing_above: small, background: '#FFDF00', icon: 'fa:calendar-times-o', underline: false, font: '', icon_align: left, foreground: '#000000', spacing_below: large, visible: true, border: '', italic: false, enabled: true, font_size: 20, tooltip: '', text: Update Borrower Log Status}
+        event_bindings: {click: cmdUpdateRetDate_click}
+      - name: cmdUpdateTrans
+        properties: {role: outlined-button, bold: true, align: center, spacing_above: small, background: '#FFDF00', icon: 'fa:calendar-times-o', underline: false, font: '', icon_align: left, foreground: '#000000', spacing_below: large, visible: true, border: '', italic: false, enabled: true, font_size: 20, tooltip: '', text: Update Transaction}
         type: Button
         layout_properties: {grid_position: 'IKLENJ,JGSWTU', row: SVMWWV, width_xs: 10, col_xs: 1}
-        event_bindings: {click: cmdReserveBtn_click}
-      - name: cmdCancelBtn
-        properties: {role: outlined-button, bold: false, align: center, spacing_above: small, background: '#000000', icon: 'fa:list-alt', underline: false, font: '', icon_align: left, foreground: '#FFFFFF', spacing_below: medium, visible: true, border: '', italic: false, enabled: true, font_size: 20, tooltip: '', text: Transactions}
+        event_bindings: {click: cmdUpdateTrans_click}
+      - name: cmdTransactionBtn
+        properties: {role: outlined-button, bold: true, align: center, spacing_above: small, background: '#000000', icon: 'fa:list-alt', underline: false, font: '', icon_align: left, foreground: '#FFFFFF', spacing_below: medium, visible: true, border: '', italic: false, enabled: true, font_size: 20, tooltip: '', text: Transactions}
         type: Button
-        layout_properties: {grid_position: 'SAFBLE,CLQFAH', row: GYAXOC, width_xs: 10, col_xs: 1}
+        layout_properties: {row: GYAXOC, width_xs: 12, col_xs: 0}
         event_bindings: {click: cmdCancelBtn_click}
     - name: lblH4Terms
       properties: {content: 'By using this service, you understood and agree to the PUP Online Services {link1} and {link2}', format: markdown, enable_slots: true, align: center, font: '', font_size: 16}

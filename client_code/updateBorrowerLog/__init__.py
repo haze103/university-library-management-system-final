@@ -12,15 +12,15 @@ class updateBorrowerLog(updateBorrowerLogTemplate):
     self.init_components(**properties)
 
   def validate_credentials(self, strAdmin, strBorrowerLogID, datDue):
-    result = anvil.server.call("validate_user_credentials", strAdmin, strBorrowerLogID, datDue)
+    result = anvil.server.call("update_existing_borrower_log", strAdmin, strBorrowerLogID, datDue)
     return result
 
   def cmdConfirmBtn_click(self, **event_args):
-    strAdmin = self.txtAdminID.text.strip()
-    strBorrowerLogID = self.txtBorrowerLogID.text.strip()
+    intAdminID = self.txtAdminID.text.strip()
+    intBorrowerLogID = self.txtBorrowerLogID.text.strip()
     datDue = self.txtDateToRet.date
 
-    if self.validate_credentials(strAdmin, strBorrowerLogID, datDue):
+    if self.validate_credentials(intAdminID, intBorrowerLogID, datDue):
       alert("Successfully Updated!")
       return True
     else:

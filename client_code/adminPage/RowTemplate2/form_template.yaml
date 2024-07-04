@@ -2,20 +2,20 @@ container: {type: DataRowPanel}
 components:
 - type: Label
   properties: {bold: true}
-  name: title
+  name: intBorrowerLogStatID
   layout_properties: {column: FHJXND}
   data_bindings:
-  - {property: text, code: 'self.item[''strBookTitle'']'}
+  - {property: text, code: 'self.item[''intBorrowerLogStatusID'']', writeback: false}
 - type: Label
   properties: {align: left, bold: true}
-  name: dtmRetD
+  name: dtmDateRet
   layout_properties: {column: ISTQYJ}
   data_bindings:
-  - {property: text, code: 'self.item[''datToReturn'']'}
+  - {property: text, code: 'self.item[''dtmReturned'']', writeback: false}
 - type: Label
   properties: {bold: true}
-  name: borrowerID
+  name: strBorrowerStatCode
   layout_properties: {column: AOHMXD}
   data_bindings:
-  - {property: text, code: 'self.item[''intBorrowerLogID'']'}
+  - {property: text, code: 'self.item[''strBorrowerStatusCode'']', writeback: false}
 is_package: true

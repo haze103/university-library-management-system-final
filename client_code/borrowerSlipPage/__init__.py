@@ -12,16 +12,12 @@ class borrowerSlipPage(borrowerSlipPageTemplate):
         self.init_components(**properties)
         self.cmdReservationDate.date = date.today() 
         self.cmdReservationDate.enabled = False
-        self.secPopUp.visible = False
+        self.secPopUp.visible = True
 
     def cmdHomeBtn_click(self, **event_args):
         from ..homePage import homePage
         self.secContentPanel.clear()
         self.secContentPanel.add_component(homePage())
-
-    def validate_credentials(self, strEmail, strPassword):
-        result = anvil.server.call('validate_user_credentials', strEmail, strPassword)
-        return result
 
     def cmdConfBtn_click(self, **event_args):
         strUserID = self.txtUniqueID.text.strip()
@@ -40,18 +36,13 @@ class borrowerSlipPage(borrowerSlipPageTemplate):
         else:
             alert(strResult)
 
+    def validate_credentials(self, strEmail, strPassword):
+      strResult = anvil.server.call("validate_user_credentials", strEmail, strPassword)
+      return strResult
+      
     def cmdConfirmBtn_click(self, **event_args):
-        strEmail = self.txtEmail.text.strip()
-        strPassword = self.txtPassword.text.strip()
+      strEmail = self.txtEmail.text.strip()
+      strPassword = self.txtPassword.text.strip()
 
-        if self.validate_credentials(strEmail, strPassword):
-            intBookID = self.get_book_id(self.intIsbn)  # Get the intBookID based on the intISBN entered
-            if intBookID:
-                if anvil.server.call('update_reservation_tables', strEmail, intBookID):
-                    alert("Reservation Confirmed")
-                else:
-                    alert("Failed to update reservation tables.")
-            else:
-                alert("Book not found or invalid ISBN.")
-        else:
-            alert("Invalid email or password. Please try again.")
+      if self.validate_credentials(strEmail, strPassword):
+        alert(title = "Access Granted. ", content = "You now have access to admin page", buttons=[])

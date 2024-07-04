@@ -54,7 +54,7 @@ components:
         type: Label
         layout_properties: {row: WUQEBN, width_xs: 3, col_xs: 7}
       - name: txtFName
-        properties: {role: outlined, spacing_above: none, placeholder: Name, background: 'theme:Primary Container'}
+        properties: {role: outlined, spacing_above: none, placeholder: First Name, background: 'theme:Primary Container'}
         type: TextBox
         layout_properties: {row: AKVMAF, width_xs: 4, col_xs: 1}
       - name: txtBookTitle
@@ -70,7 +70,7 @@ components:
         type: Label
         layout_properties: {row: JVSVMV, width_xs: 3, col_xs: 7}
       - name: txtMName
-        properties: {role: outlined, spacing_above: none, placeholder: Name, background: 'theme:Primary Container'}
+        properties: {role: outlined, spacing_above: none, placeholder: Middle Name, background: 'theme:Primary Container'}
         type: TextBox
         layout_properties: {row: ISOKFO, width_xs: 4, col_xs: 1}
       - name: txtReservationDate
@@ -87,7 +87,7 @@ components:
         type: Label
         layout_properties: {row: QNMIKF, width_xs: 3, col_xs: 7}
       - name: txtLName
-        properties: {role: outlined, spacing_above: none, placeholder: Name, background: 'theme:Primary Container'}
+        properties: {role: outlined, spacing_above: none, placeholder: Last Name, background: 'theme:Primary Container'}
         type: TextBox
         layout_properties: {row: HPVBWT, width_xs: 4, col_xs: 1}
       - name: txtDateBorrowed
@@ -108,7 +108,7 @@ components:
         type: TextBox
         layout_properties: {row: DUZHHL, width_xs: 4, col_xs: 1}
       - name: txtPassword
-        properties: {role: outlined, spacing_above: none, placeholder: Name, background: 'theme:Primary Container', hide_text: true}
+        properties: {role: outlined, spacing_above: none, placeholder: Password, background: 'theme:Primary Container', hide_text: true}
         type: TextBox
         layout_properties: {row: DUZHHL, width_xs: 4, col_xs: 7}
         data_bindings: []

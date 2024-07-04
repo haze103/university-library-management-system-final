@@ -39,7 +39,7 @@ class borrowerSlipPage(borrowerSlipPageTemplate):
             self.txtLName.text = ""
             self.txtISBN.text = ""
             self.txtBookTitle.text = ""
-            self.txtReservationDate.date = None  # Set the date to None to clear it
+            self.txtDateBorrowed.date = None  # Set the date to None to clear it
             self.txtEmail.text = ""
             self.txtPassword.text = ""
         else:

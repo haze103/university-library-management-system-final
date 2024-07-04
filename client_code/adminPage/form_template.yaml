@@ -36,6 +36,7 @@ components:
           - {id: OJLQEN, title: User ID, data_key: column_3, width: 180, expand: false}
           - {id: FWBWWG, data_key: column_1, title: 'Reservation Date and Time '}
           rows_per_page: 10
+          role: tonal-data-grid
         type: DataGrid
         components:
         - name: dataPanel1
@@ -62,11 +63,11 @@ components:
       components:
       - type: DataGrid
         properties:
-          role: null
+          role: tonal-data-grid
           spacing_above: small
           columns:
-          - {id: FHJXND, title: Title, data_key: column_1, $$hashKey: 'object:50151', width: 386, expand: false}
-          - {id: ISTQYJ, title: Return Date, data_key: column_2, $$hashKey: 'object:50152', width: 255, expand: false}
+          - {id: FHJXND, title: Title, data_key: column_1, $$hashKey: 'object:50151', width: 325, expand: false}
+          - {id: ISTQYJ, title: Return Date, data_key: column_2, $$hashKey: 'object:50152', width: 182, expand: false}
           - {id: AOHMXD, title: Borrower Log ID, data_key: column_3, $$hashKey: 'object:50153'}
           background: ''
           rows_per_page: 10

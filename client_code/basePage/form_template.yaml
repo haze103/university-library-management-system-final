@@ -26,3 +26,4 @@ components:
     properties: {bold: false, text: Admin, icon: 'fa:lock', background: 'theme:Primary Container', underline: false}
     type: Link
     layout_properties: {}
+    event_bindings: {click: cmdAdminBtn_click}

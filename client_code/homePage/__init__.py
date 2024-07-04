@@ -22,21 +22,5 @@ class homePage(homePageTemplate):
     self.secContentPanel.add_component(borrowerSlipPage())
 
   def cmdCancelBtn_click(self, **event_args):
-    alert(content=adminIDConf(), title="Confirm your access level", large=True, buttons=[])
-    strEmail = self.txtEmail.text.strip()
-    strPassword = self.txtPassword.text.strip()
-
-    if self.validate_credentials(strEmail, strPassword):
-        #intISBN = # Replace this with the ISBN of the reserved book
-        intBookID = anvil.server.call('get_book_id_from_isbn', intISBN)
-
-        if intBookID is not None:
-            if anvil.server.call('update_reservation_tables', strEmail, intBookID):
-                alert("Reservation Confirmed")
-                return True
-            else:
-                alert("Failed to update reservation tables. Please try again.")
-        else:
-            alert("Book ID not found for the given ISBN.")
-    else:
-        alert("Invalid email or password. Please try again.")
+    self.secContentPanel.clear()
+    self.secContentPanel.add_component(borrowerSlipPage())

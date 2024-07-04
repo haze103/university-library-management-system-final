@@ -5,25 +5,25 @@ container:
 components:
 - type: Label
   properties: {}
-  name: title
+  name: borrowerLogID
   layout_properties: {column: JKSDUP}
   data_bindings:
-  - {property: text, code: 'self.item[''strReservedBookTitle'']'}
+  - {property: text, code: 'self.item[''intBorrowerLogID'']'}
 - type: Label
   properties: {}
-  name: ISBN
+  name: reservationID
   layout_properties: {column: VJQQOR}
   data_bindings:
-  - {property: text, code: 'self.item[''intISBN'']'}
+  - {property: text, code: 'self.item[''intReservationLogID'']'}
 - type: Label
   properties: {}
-  name: userID
+  name: datReturn
   layout_properties: {column: OJLQEN}
   data_bindings:
-  - {property: text, code: 'self.item[''intUserAccountID'']'}
+  - {property: text, code: 'self.item[''datToReturn'']'}
 - type: Label
   properties: {}
-  name: dtmReserved
+  name: adminID
   layout_properties: {column: FWBWWG}
   data_bindings:
-  - {property: text, code: 'self.item[''dtmReserved'']'}
+  - {property: text, code: 'self.item[''intAdminAccountID'']'}

@@ -20,7 +20,7 @@ components:
       layout_properties: {grid_position: 'BDLKAE,UFSQEO'}
       components:
       - name: label_1
-        properties: {bold: true, text: Reserved Books, foreground: '#FFFFFF', font_size: 30, align: center}
+        properties: {bold: true, text: Borrower Log, foreground: '#FFFFFF', font_size: 30, align: center}
         type: Label
         layout_properties: {grid_position: 'EWHUVN,SSOYLF'}
     - name: outlined_card_2
@@ -30,13 +30,23 @@ components:
       components:
       - name: tblReserved
         properties:
-          columns:
-          - {id: JKSDUP, title: Title, data_key: column_1, width: 296, expand: false}
-          - {id: VJQQOR, title: ISBN, data_key: column_2, width: 199, expand: false}
-          - {id: OJLQEN, title: User ID, data_key: column_3, width: 180, expand: false}
-          - {id: FWBWWG, data_key: column_1, title: 'Reservation Date and Time '}
-          rows_per_page: 10
           role: tonal-data-grid
+          spacing_above: small
+          columns:
+          - {id: JKSDUP, title: Borrower Log ID, data_key: column_1, width: '230', expand: false, $$hashKey: 'object:281'}
+          - {id: VJQQOR, title: Reservation ID, data_key: column_2, width: '230', expand: false, $$hashKey: 'object:282'}
+          - {id: OJLQEN, title: Date to Return, data_key: column_3, width: '220', expand: false, $$hashKey: 'object:283'}
+          - {id: FWBWWG, data_key: column_1, title: Admin ID, $$hashKey: 'object:284', width: '220'}
+          background: ''
+          rows_per_page: 10
+          wrap_on: never
+          foreground: ''
+          show_page_controls: true
+          auto_header: true
+          spacing_below: small
+          visible: true
+          border: ''
+          tooltip: ''
         type: DataGrid
         components:
         - name: dataPanel1
@@ -53,7 +63,7 @@ components:
       layout_properties: {grid_position: 'KSBJJR,BMHCXQ'}
       components:
       - name: label_1_copy
-        properties: {bold: true, text: Borrowed Books, foreground: '#FFFFFF', font_size: 30, align: center}
+        properties: {bold: true, text: History, foreground: '#FFFFFF', font_size: 30, align: center}
         type: Label
         layout_properties: {grid_position: 'EWHUVN,SSOYLF'}
     - name: outlined_card_2_copy

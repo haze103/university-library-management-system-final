@@ -5,7 +5,6 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from ..borrowerSlipPage import borrowerSlipPage
-from ..adminIDConf import adminIDConf
 
 class homePage(homePageTemplate):
   def __init__(self, **properties):

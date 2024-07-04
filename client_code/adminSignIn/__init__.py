@@ -4,7 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ..adminPage import adminPage
+from ..adminHome import adminHome
 
 class adminSignIn(adminSignInTemplate):
   def __init__(self, **properties):
@@ -23,6 +23,6 @@ class adminSignIn(adminSignInTemplate):
     if self.validate_credentials(strAdminID, strEmail, strPassword):
       alert(title = "Access Granted. ", content = "You now have access to admin page", buttons=[])
       self.secContentPanel.clear()
-      self.secContentPanel.add_component(adminPage())
+      self.secContentPanel.add_component(adminHome())
     else:
       alert("Invalid email or password. Please try again.")

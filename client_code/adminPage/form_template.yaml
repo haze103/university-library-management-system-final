@@ -54,7 +54,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'OQBAOB,WJJUKI'}
     - name: outlined_card_1
-      properties: {role: outlined-card, background: 'theme:Primary'}
+      properties: {role: outlined-card, background: 'theme:On Primary Container'}
       type: ColumnPanel
       layout_properties: {grid_position: 'BDLKAE,UFSQEO'}
       components:
@@ -97,7 +97,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'ZIJHKE,AEGCXM'}
     - name: outlined_card_1_copy
-      properties: {role: outlined-card, background: 'theme:On Primary Container'}
+      properties: {role: outlined-card, background: 'theme:On Secondary Container'}
       type: ColumnPanel
       layout_properties: {grid_position: 'KSBJJR,BMHCXQ'}
       components:

@@ -10,8 +10,6 @@ class payFees(payFeesTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.secPopUp1.visible = False
-    self.lblDatReportLost.visible = False
 
   def validate_credentials(self, intLostStatID, strPaymentMethod, datPayment):
     result = anvil.server.call("update_payment", intLostStatID, strPaymentMethod, datPayment)

@@ -16,5 +16,3 @@ class basePage(basePageTemplate):
   def cmdAdminBtn_click(self, **event_args):
     self.secContentPanel.clear()
     self.secContentPanel.add_component(adminSignIn())
-
-

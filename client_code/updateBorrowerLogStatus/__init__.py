@@ -15,33 +15,33 @@ class updateBorrowerLogStatus(updateBorrowerLogStatusTemplate):
     self.lblDatReportLost.visible = False
     self.cmdPayBtn.visible = False
 
-  def validate_credentials(self, intBorrowerLogID, dtmReturned, strBorrowerStatusCode):
-    result = anvil.server.call("update_existing_borrower_log_status", intBorrowerLogID, dtmReturned, strBorrowerStatusCode)
+  def validate_credentials(self, intBorrowerLogID, dtmReturned, strStatusName):
+    result = anvil.server.call("update_existing_borrower_log_status", intBorrowerLogID, dtmReturned, strStatusName)
     return result
 
   def cmdConfirmBtn_click(self, **event_args):
     intBorrowerLogID = self.txtBorrowerLogID.text.strip()
-    strBorrowerStatusCode = self.txtBorrowerStat.selected_value
+    strStatusName = self.txtBorrowerStat.selected_value
     dtmReturned = self.txtRetDate.date
 
-    if self.validate_credentials(intBorrowerLogID, dtmReturned, strBorrowerStatusCode):
+    if self.validate_credentials(intBorrowerLogID, dtmReturned, strStatusName):
       alert("Successfully Updated!")
+      self.show_payment(strStatusName)
       return True
     else:
       alert("Error Updating!")
 
-  def show_payment(self, strBorrowerStatus):
-    if strBorrowerStatus == 'Lost':
+  def show_payment(self, strStatusName):
+    if strStatusName == 'Lost':
       self.txtDatLost.visible = True
       self.lblDatReportLost.visible = True
       self.cmdPayBtn.visible = True
-
-      datLost = self.txtDatLost.date
-      intBorrowerLogStatusID = self.txtBorrowerLogStatusID.text.strip()
-      
-      anvil.server.call('update_lost_status', intBorrowerLogStatusID, datLost)
+      self.cmdConfirmBtn.enabled = False
 
   def cmdPayBtn_click(self, **event_args):
+    datLost = self.txtDatLost.date
+    intBorrowerLogID = self.txtBorrowerLogID.text.strip()
+    anvil.server.call('update_lost_status', intBorrowerLogID, datLost)
     self.secContentPanel.clear()
     self.secContentPanel.add_component(payFees())
 

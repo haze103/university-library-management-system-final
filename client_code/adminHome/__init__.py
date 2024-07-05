@@ -7,6 +7,7 @@ from anvil.tables import app_tables
 from ..updateBorrowerLog import updateBorrowerLog
 from ..updateBorrowerLogStatus import updateBorrowerLogStatus
 from ..adminPage import adminPage
+from ..payFees import payFees
 
 
 class adminHome(adminHomeTemplate):
@@ -25,6 +26,10 @@ class adminHome(adminHomeTemplate):
   def cmdCancelBtn_click(self, **event_args):
     self.secContentPanel.clear()
     self.secContentPanel.add_component(adminPage())
+
+  def cmdPayBtn_click(self, **event_args):
+    self.secContentPanel.clear()
+    self.secContentPanel.add_component(payFees())
 
 
 

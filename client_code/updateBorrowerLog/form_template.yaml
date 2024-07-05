@@ -46,9 +46,10 @@ components:
         type: TextBox
         layout_properties: {row: DWKQRT, width_xs: 4, col_xs: 4}
       - name: txtDateToRet
-        properties: {background: '#FFFFFF', enabled: true, visible: true, pick_time: false}
+        properties: {background: '#FFFFFF', enabled: true, visible: true, pick_time: true}
         type: DatePicker
         layout_properties: {row: DWKQRT, width_xs: 3, col_xs: 9}
+        data_bindings: []
       - name: cmdConfirmBtn
         properties: {role: filled-button, bold: false, spacing_above: large, background: '#DAA520', foreground: '#800000', spacing_below: medium, border: '', font_size: 18, text: Confirm}
         type: Button

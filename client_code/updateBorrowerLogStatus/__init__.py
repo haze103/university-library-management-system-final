@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from ..payFees import payFees
-
+from datetime import date
 
 class updateBorrowerLogStatus(updateBorrowerLogStatusTemplate):
   def __init__(self, **properties):

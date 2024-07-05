@@ -43,11 +43,11 @@ components:
         layout_properties: {row: ZGCHHJ, width_xs: 4, col_xs: 7}
         event_bindings: {pressed_enter: txtISBN_pressed_enter}
       - name: label_1_copy_5
-        properties: {spacing_above: none, spacing_below: none, text: Reservation Date, bold: true}
+        properties: {spacing_above: none, spacing_below: none, text: Cancelled Date, bold: true}
         type: Label
         layout_properties: {row: JVSVMV, width_xs: 3, col_xs: 1}
       - name: txtDateCancelled
-        properties: {}
+        properties: {pick_time: true}
         type: DatePicker
         layout_properties: {row: ISOKFO, width_xs: 3, col_xs: 1}
         event_bindings: {change: cmdReservationDate_change}

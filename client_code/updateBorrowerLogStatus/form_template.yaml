@@ -51,7 +51,7 @@ components:
         layout_properties: {row: DWKQRT, width_xs: 4, col_xs: 4}
         data_bindings: []
       - name: txtRetDate
-        properties: {background: '#FFFFFF'}
+        properties: {background: '#FFFFFF', pick_time: true}
         type: DatePicker
         layout_properties: {row: DWKQRT, width_xs: 3, col_xs: 9}
       - name: lblDatReportLost
@@ -59,7 +59,7 @@ components:
         type: Label
         layout_properties: {row: EREFOW, width_xs: 4, col_xs: 0}
       - name: txtDatLost
-        properties: {background: '#FFFFFF'}
+        properties: {background: '#FFFFFF', pick_time: true}
         type: DatePicker
         layout_properties: {row: EREFOW, width_xs: 4, col_xs: 4}
       - name: cmdPayBtn

@@ -32,7 +32,7 @@ components:
         - {id: DABYWC, data_key: column_4, title: Status, $$hashKey: 'object:36615'}
         background: ''
         rows_per_page: 10
-        wrap_on: never
+        wrap_on: mobile
         foreground: ''
         show_page_controls: true
         auto_header: true

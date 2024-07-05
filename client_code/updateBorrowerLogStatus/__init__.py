@@ -41,9 +41,16 @@ class updateBorrowerLogStatus(updateBorrowerLogStatusTemplate):
   def cmdPayBtn_click(self, **event_args):
     datLost = self.txtDatLost.date
     intBorrowerLogID = self.txtBorrowerLogID.text.strip()
-    anvil.server.call('update_lost_status', intBorrowerLogID, datLost)
-    self.secContentPanel.clear()
-    self.secContentPanel.add_component(payFees())
+
+    result = anvil.server.call('update_lost_status', intBorrowerLogID, datLost)
+    
+    if result:
+        alert("Successfully updated tblloststatus.")
+        self.secContentPanel.clear()
+        self.secContentPanel.add_component(payFees())
+    else:
+        alert("Error updating tblloststatus.")
+
 
   def cmdHomeBtn_click(self, **event_args):
     from ..adminHome import adminHome

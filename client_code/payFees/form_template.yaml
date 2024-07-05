@@ -42,11 +42,14 @@ components:
         type: TextBox
         layout_properties: {row: DWKQRT, width_xs: 3, col_xs: 0}
       - name: txtPaymentMethod
-        properties: {background: '#FFFFFF', placeholder: '', include_placeholder: false}
+        properties:
+          background: '#FFFFFF'
+          placeholder: ''
+          include_placeholder: false
+          items: [Bank, Cash, G-Cash, Not Paid, PayMaya]
         type: DropDown
         layout_properties: {row: DWKQRT, width_xs: 4, col_xs: 4}
-        data_bindings:
-        - {property: items, code: 'self.item[''strPaymentMethodName'']', writeback: false}
+        data_bindings: []
       - name: txtDatPayment
         properties: {background: '#FFFFFF'}
         type: DatePicker

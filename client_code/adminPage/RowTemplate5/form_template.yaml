@@ -1,0 +1,35 @@
+is_package: true
+container:
+  type: DataRowPanel
+  properties: {align: center}
+components:
+- type: Label
+  properties: {align: center, bold: true}
+  name: reservationLogID
+  layout_properties: {column: JKSDUP}
+  data_bindings:
+  - {property: text, code: 'self.item[''intReservationLogID'']'}
+- type: Label
+  properties: {align: center, bold: true}
+  name: userAccID
+  layout_properties: {column: VJQQOR}
+  data_bindings:
+  - {property: text, code: 'self.item[''intUserAccountID'']'}
+- type: Label
+  properties: {align: center, bold: true}
+  name: bookID
+  layout_properties: {column: OJLQEN}
+  data_bindings:
+  - {property: text, code: 'self.item[''intBookID'']'}
+- type: Label
+  properties: {align: center, bold: true}
+  name: dtmReserved
+  layout_properties: {column: ZWYGOO}
+  data_bindings:
+  - {property: text, code: 'self.item[''dtmReserved'']'}
+- type: Label
+  properties: {align: center, bold: true}
+  name: dtmCancelled
+  layout_properties: {column: CYBKYA}
+  data_bindings:
+  - {property: text, code: 'self.item[''dtmCancelled'']'}

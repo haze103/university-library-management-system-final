@@ -23,14 +23,14 @@ components:
         - name: cmdHomeBtn
           properties: {text: Admin Home, icon: 'fa:home', bold: true, foreground: '#000000', spacing_above: none, spacing_below: none, align: left}
           type: Button
-          layout_properties: {row: GHGJIU, width_xs: 3, col_xs: 0}
+          layout_properties: {row: GHGJIU, width_xs: 4, col_xs: 0}
           event_bindings: {click: cmdHomeBtn_click}
       - name: lblh2_copy
-        properties: {text: Admin ID, bold: true, align: center, font_size: 18, underline: false, italic: false, foreground: ''}
+        properties: {text: Admin Account ID, bold: true, align: center, font_size: 18, underline: false, italic: false, foreground: ''}
         type: Label
         layout_properties: {row: QSEGXG, width_xs: 3, col_xs: 0}
       - name: lblh2
-        properties: {text: Borrower Log ID, bold: true, align: center, font_size: 18, underline: false, italic: false, foreground: ''}
+        properties: {text: Reservation Log ID, bold: true, align: center, font_size: 18, underline: false, italic: false, foreground: ''}
         type: Label
         layout_properties: {row: QSEGXG, width_xs: 4, col_xs: 4}
       - name: lblh2_1
@@ -38,11 +38,11 @@ components:
         type: Label
         layout_properties: {row: QSEGXG, width_xs: 3, col_xs: 9}
       - name: txtAdminID
-        properties: {role: outlined, placeholder: Admin ID, background: '#FFFFFF', type: text}
+        properties: {role: outlined, placeholder: Admin Account ID, background: '#FFFFFF', type: text}
         type: TextBox
         layout_properties: {row: DWKQRT, width_xs: 3, col_xs: 0}
-      - name: txtBorrowerLogID
-        properties: {role: outlined, placeholder: Borrower Log ID, background: '#FFFFFF', type: text}
+      - name: txtReservationLogID
+        properties: {role: outlined, placeholder: Reservation Log ID, background: '#FFFFFF', type: text}
         type: TextBox
         layout_properties: {row: DWKQRT, width_xs: 4, col_xs: 4}
       - name: txtDateToRet

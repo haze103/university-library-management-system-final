@@ -4,26 +4,26 @@ container:
   properties: {align: center, bold: true}
 components:
 - type: Label
-  properties: {align: center}
-  name: borrowerLogID
+  properties: {align: center, text: borrowerID}
+  name: reservationLogID
   layout_properties: {column: JKSDUP}
   data_bindings:
-  - {property: text, code: 'self.item[''intBorrowerLogID'']'}
+  - {property: text, code: 'self.item[''intBorrowerLogID'']', writeback: false}
 - type: Label
   properties: {align: center}
   name: reservationID
   layout_properties: {column: VJQQOR}
   data_bindings:
-  - {property: text, code: 'self.item[''intReservationLogID'']'}
+  - {property: text, code: 'self.item[''intReservationLogID'']', writeback: false}
 - type: Label
   properties: {align: center}
-  name: datReturn
+  name: datToRet
   layout_properties: {column: OJLQEN}
   data_bindings:
-  - {property: text, code: 'self.item[''datToReturn'']'}
+  - {property: text, code: 'self.item[''datToReturn'']', writeback: false}
 - type: Label
   properties: {align: center}
-  name: adminID
+  name: adminAccID
   layout_properties: {column: FWBWWG}
   data_bindings:
-  - {property: text, code: 'self.item[''intAdminAccountID'']'}
+  - {property: text, code: 'self.item[''intAdminAccountID'']', writeback: false}

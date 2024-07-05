@@ -15,16 +15,16 @@ class updateBorrowerLogStatus(updateBorrowerLogStatusTemplate):
     self.lblDatReportLost.visible = False
     self.cmdPayBtn.visible = False
 
-  def validate_credentials(self, intBorrowerLogStatusID, dtmReturned, strBorrowerStatusCode):
-    result = anvil.server.call("update_existing_borrower_log_status", intBorrowerLogStatusID, dtmReturned, strBorrowerStatusCode)
+  def validate_credentials(self, intBorrowerLogID, dtmReturned, strBorrowerStatusCode):
+    result = anvil.server.call("update_existing_borrower_log_status", intBorrowerLogID, dtmReturned, strBorrowerStatusCode)
     return result
 
   def cmdConfirmBtn_click(self, **event_args):
-    intBorrowerLogStatusID = self.txtBorrowerLogStatusID.text.strip()
-    strBorrowerStatusCode = self.dropdown_borrower_status.selected_value
+    intBorrowerLogID = self.txtBorrowerLogID.text.strip()
+    strBorrowerStatusCode = self.txtBorrowerStat.selected_value
     dtmReturned = self.txtRetDate.date
 
-    if self.validate_credentials(intBorrowerLogStatusID, dtmReturned, strBorrowerStatusCode):
+    if self.validate_credentials(intBorrowerLogID, dtmReturned, strBorrowerStatusCode):
       alert("Successfully Updated!")
       return True
     else:

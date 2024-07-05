@@ -46,7 +46,7 @@ components:
           background: '#FFFFFF'
           placeholder: ''
           include_placeholder: false
-          items: [Available, Reserved, Unavailable]
+          items: [Returned on Time, Returned Late, Lost]
         type: DropDown
         layout_properties: {row: DWKQRT, width_xs: 4, col_xs: 4}
         data_bindings: []

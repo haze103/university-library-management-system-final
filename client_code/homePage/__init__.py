@@ -1,9 +1,6 @@
 from ._anvil_designer import homePageTemplate
 from anvil import *
 import anvil.server
-import anvil.tables as tables
-import anvil.tables.query as q
-from anvil.tables import app_tables
 from ..cancelReservation import cancelReservation
 from ..borrowerSlipPage import borrowerSlipPage
 

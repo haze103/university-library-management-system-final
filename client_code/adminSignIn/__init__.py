@@ -22,4 +22,4 @@ class adminSignIn(adminSignInTemplate):
       self.secContentPanel.clear()
       self.secContentPanel.add_component(adminHome())
     else:
-      alert("Invalid email or password. Please try again.")
+      alert("Invalid credentials. Please try again.")

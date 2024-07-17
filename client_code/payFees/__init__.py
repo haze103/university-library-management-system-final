@@ -18,11 +18,10 @@ class payFees(payFeesTemplate):
     strPaymentMethod = self.txtPaymentMethod.selected_value
     datPayment = self.txtDatPayment.date
 
-    if self.validate_credentials(intLostStatID, strPaymentMethod, datPayment):
+    if self.validate_credentials(intLostStatID, strPaymentMethod, datPayment) is True:
       alert("Payment Successful!")
-      return True
     else:
-      alert("Payment Error!")
+      alert(self.validate_credentials(intLostStatID, strPaymentMethod, datPayment))
 
   def cmdHomeBtn_click(self, **event_args):
     from ..adminHome import adminHome

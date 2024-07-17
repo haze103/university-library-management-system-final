@@ -21,12 +21,11 @@ class updateBorrowerLogStatus(updateBorrowerLogStatusTemplate):
     strStatusName = self.txtBorrowerStat.selected_value
     dtmReturned = self.txtRetDate.date
 
-    if self.validate_credentials(intBorrowerLogID, dtmReturned, strStatusName):
+    if self.validate_credentials(intBorrowerLogID, dtmReturned, strStatusName) is True:
       alert("Successfully Updated!")
       self.show_payment(strStatusName)
-      return True
     else:
-      alert("Error Updating!")
+      alert(self.validate_credentials(intBorrowerLogID, dtmReturned, strStatusName))
 
   def show_payment(self, strStatusName):
     if strStatusName == 'Lost':
@@ -41,12 +40,12 @@ class updateBorrowerLogStatus(updateBorrowerLogStatusTemplate):
 
     result = anvil.server.call('update_lost_status', intBorrowerLogID, datLost)
     
-    if result:
-        alert("Successfully updated tblloststatus.")
+    if result is True:
+        alert("Successfully updated.")
         self.secContentPanel.clear()
         self.secContentPanel.add_component(payFees())
     else:
-        alert("Error updating tblloststatus.")
+        alert(result)
 
 
   def cmdHomeBtn_click(self, **event_args):

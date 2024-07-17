@@ -22,8 +22,9 @@ class cancelReservation(cancelReservationTemplate):
     strISBN = self.txtISBN.text.strip()
     datCancelled = self.txtDateCancelled.date
     
-    anvil.server.call('cancel_reservation', intReservationLogID, strISBN, datCancelled)
+    result = anvil.server.call('cancel_reservation', intReservationLogID, strISBN, datCancelled)
 
-
-
-
+    if result == "Valid":
+       alert(content="Your reservation is now cancelled.", title="Reservation Cancelled")
+    else:
+        alert(result)

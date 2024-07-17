@@ -18,11 +18,10 @@ class updateBorrowerLog(updateBorrowerLogTemplate):
     intReservationLogID = self.txtReservationLogID.text.strip()
     datDue = self.txtDateToRet.date
 
-    if self.validate_credentials(intReservationLogID, datDue, intAdminID):
+    if self.validate_credentials(intReservationLogID, datDue, intAdminID) is True:
       alert("Successfully Updated!")
-      return True
     else:
-      alert("Error Updating!")
+      alert(self.validate_credentials(intReservationLogID, datDue, intAdminID))
 
   def cmdHomeBtn_click(self, **event_args):
     from ..adminHome import adminHome

@@ -51,7 +51,7 @@ components:
         layout_properties: {row: DWKQRT, width_xs: 4, col_xs: 4}
         data_bindings: []
       - name: txtRetDate
-        properties: {background: '#FFFFFF', pick_time: true}
+        properties: {background: '#FFFFFF', pick_time: false}
         type: DatePicker
         layout_properties: {row: DWKQRT, width_xs: 3, col_xs: 9}
       - name: lblDatReportLost

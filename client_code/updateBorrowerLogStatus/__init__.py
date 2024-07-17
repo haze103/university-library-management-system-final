@@ -47,7 +47,6 @@ class updateBorrowerLogStatus(updateBorrowerLogStatusTemplate):
     else:
         alert(result)
 
-
   def cmdHomeBtn_click(self, **event_args):
     from ..adminHome import adminHome
     self.secContentPanel.clear()

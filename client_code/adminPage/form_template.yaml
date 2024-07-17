@@ -43,11 +43,13 @@ components:
           - {id: ZWYGOO, data_key: column_4, title: Date Reserved}
           - {id: CYBKYA, data_key: column_5, title: Date Cancelled}
           role: tonal-data-grid
+          background: theme:On Primary
         type: DataGrid
         components:
         - name: dataPanel
-          properties: {item_template: adminPage.RowTemplate5}
+          properties: {item_template: adminPage.RowTemplate5, background: ''}
           type: RepeatingPanel
+          layout_properties: {}
         layout_properties: {grid_position: 'IZVISE,LBCCPI'}
     - name: shpSpace2_copy_2
       properties: {height: 32}
@@ -76,7 +78,7 @@ components:
           - {id: VJQQOR, title: Reservation ID, data_key: column_2, width: '230', expand: false, $$hashKey: 'object:282'}
           - {id: OJLQEN, title: Date to Return, data_key: column_3, width: '220', expand: false, $$hashKey: 'object:283'}
           - {id: FWBWWG, data_key: column_1, title: Admin ID, $$hashKey: 'object:284', width: '220'}
-          background: ''
+          background: theme:On Secondary
           rows_per_page: 10
           wrap_on: never
           foreground: ''
@@ -89,8 +91,9 @@ components:
         type: DataGrid
         components:
         - name: dataPanel1
-          properties: {item_template: adminPage.RowTemplate1}
+          properties: {item_template: adminPage.RowTemplate1, background: ''}
           type: RepeatingPanel
+          layout_properties: {}
         layout_properties: {grid_position: 'IOWEKO,AOSRJC'}
     - name: shpSpace2
       properties: {height: 32}
@@ -118,7 +121,7 @@ components:
           - {id: FHJXND, title: Borrower Log Status ID, data_key: column_1, $$hashKey: 'object:50151', width: 261, expand: false}
           - {id: ISTQYJ, title: Returned Date, data_key: column_2, $$hashKey: 'object:50152', width: 343, expand: false}
           - {id: AOHMXD, title: Borrower Status Code, data_key: column_3, $$hashKey: 'object:50153'}
-          background: ''
+          background: theme:On Secondary
           rows_per_page: 10
           wrap_on: never
           foreground: ''

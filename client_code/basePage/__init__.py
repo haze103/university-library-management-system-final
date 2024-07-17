@@ -13,3 +13,11 @@ class basePage(basePageTemplate):
   def cmdAdminBtn_click(self, **event_args):
     self.secContentPanel.clear()
     self.secContentPanel.add_component(adminSignIn())
+    self.cmdAdminBtn.visible = False
+    self.cmdMainBtn.visible = True
+
+  def cmdMainBtn_click(self, **event_args):
+    self.secContentPanel.clear()
+    self.secContentPanel.add_component(homePage())
+    self.cmdAdminBtn.visible = True
+    self.cmdMainBtn.visible = False
